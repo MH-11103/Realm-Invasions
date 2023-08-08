@@ -12,7 +12,7 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)) // manual method from keyboard
         {
             ShootBullet();
         }

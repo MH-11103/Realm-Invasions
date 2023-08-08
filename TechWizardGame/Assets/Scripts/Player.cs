@@ -4,32 +4,40 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public int maxHealth = 1000;
+    public int currentHealth;
 
-	public int maxHealth = 100;
-	public int currentHealth;
-
-	public HealthBar healthBar;
+    public HealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
     {
-		currentHealth = maxHealth;
-		healthBar.SetMaxHealth(maxHealth);
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
-    // Update is called once per frame
-    void Update()
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Space))
+    //    {
+    //        TakeDamage(20);
+    //    }
+    //}
+
+    void OnCollisionEnter(Collision collision)
     {
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			TakeDamage(20);
-		}
+        if (collision.gameObject.CompareTag("Target")) // Assuming the prefab has a tag "EnemyPrefab"
+        {
+            TakeDamage(10); // Decrease health when the prefab collides with the player
+            Destroy(collision.gameObject); // Destroy the prefab
+        }
     }
 
-	void TakeDamage(int damage)
-	{
-		currentHealth -= damage;
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
 
-		healthBar.SetHealth(currentHealth);
-	}
+        healthBar.SetHealth(currentHealth);
+    }
 }
