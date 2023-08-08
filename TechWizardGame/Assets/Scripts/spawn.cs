@@ -1,12 +1,11 @@
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 
-public class spawn : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
     public GameObject characterPrefab;
     public int numberOfCharacters = 10;
-    public float radius = 5f;
-    public float spawnDelay = 1f; // Time delay between spawning each character
+    public float radius = 20f;
+    public float spawnDelay = 2f; // Time delay between spawning each character
     private int charactersSpawned = 0;
 
     void Start()
@@ -27,22 +26,25 @@ public class spawn : MonoBehaviour
             CancelInvoke("SpawnCharacter");
             return;
         }
-        
-        float angle = charactersSpawned * Mathf.PI * 2f / numberOfCharacters;// angle for the character to spawn from around the circle
 
-        // position on circle using trigonometry
-        float x = Mathf.Cos(angle) * radius;
-        float z = Mathf.Sin(angle) * radius;
-        //--------------------------------------
+        // Generate a random angle within the circle
+        float randomAngle = Random.Range(0f, Mathf.PI * 2f);
 
-        Vector3 spawnPosition = transform.position + new Vector3(x, 0f, z); // setting the position for character to spawn from
-        GameObject newCharacter = Instantiate(characterPrefab, spawnPosition, Quaternion.identity);// spawning the character
-       
-        Vector3 directionToCenter = transform.position - newCharacter.transform.position; // direction to the center of the circle
+        // Calculate the position using trigonometry
+        float x = Mathf.Cos(randomAngle) * radius;
+        float z = Mathf.Sin(randomAngle) * radius;
+
+        // Instantiate the character at the calculated position
+        Vector3 spawnPosition = transform.position + new Vector3(x, 0f, z);
+        GameObject newCharacter = Instantiate(characterPrefab, spawnPosition, Quaternion.identity);
+
+        // Calculate the direction to the center
+        Vector3 directionToCenter = transform.position - newCharacter.transform.position;
 
         // Set the character's rotation to face the center
-        newCharacter.transform.rotation = Quaternion.LookRotation(directionToCenter); //for character to facethe center
- 
-        charactersSpawned++;// character spawn count
+        newCharacter.transform.rotation = Quaternion.LookRotation(directionToCenter);
+
+        // Increase the count of characters spawned
+        charactersSpawned++;
     }
 }
