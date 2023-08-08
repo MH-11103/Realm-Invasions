@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Backup(Core Scene).unity
     guid: 84213f292616d6d49978afc90514759a
   m_configObjects: {}

@@ -3,10 +3,8 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject characterPrefab;
-    public int numberOfCharacters = 10;
     public float radius = 20f;
     public float spawnDelay = 2f; // Time delay between spawning each character
-    private int charactersSpawned = 0;
 
     void Start()
     {
@@ -20,13 +18,6 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnCharacter()
     {
-        if (charactersSpawned >= numberOfCharacters)
-        {
-            // Stop invoking the method if all characters are spawned
-            CancelInvoke("SpawnCharacter");
-            return;
-        }
-
         // Generate a random angle within the circle
         float randomAngle = Random.Range(0f, Mathf.PI * 2f);
 
@@ -43,8 +34,5 @@ public class EnemySpawner : MonoBehaviour
 
         // Set the character's rotation to face the center
         newCharacter.transform.rotation = Quaternion.LookRotation(directionToCenter);
-
-        // Increase the count of characters spawned
-        charactersSpawned++;
     }
 }
