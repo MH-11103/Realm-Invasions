@@ -26,22 +26,16 @@ public class Gun : MonoBehaviour
     }
 
     void DetectTarget()
-    {
-        RaycastHit hit;
-        Debug.DrawRay(bulletSpawnPoint.position, bulletSpawnPoint.forward * detectionRange, Color.red); // Debug ray
+{
+    RaycastHit hit;
+    Debug.DrawRay(bulletSpawnPoint.position, bulletSpawnPoint.forward * detectionRange, Color.red); // Debug ray
 
-        if (Physics.Raycast(bulletSpawnPoint.position, bulletSpawnPoint.forward, out hit, detectionRange))
+    if (Physics.Raycast(bulletSpawnPoint.position, bulletSpawnPoint.forward, out hit, detectionRange))
+    {
+        if (hit.collider.CompareTag("Target")) // Change "Target" to the appropriate tag
         {
-            if (hit.collider.CompareTag("Target")) // Change "Target" to the appropriate tag
-            {
-                targetObject = hit.collider.gameObject;
-                isShooting = true;
-            }
-            else
-            {
-                targetObject = null;
-                isShooting = false;
-            }
+            targetObject = hit.collider.gameObject;
+            isShooting = true;
         }
         else
         {
@@ -49,10 +43,17 @@ public class Gun : MonoBehaviour
             isShooting = false;
         }
     }
-
-    void ShootBullet()
+    else
     {
-        var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-        bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
+        targetObject = null;
+        isShooting = false;
     }
 }
+
+void ShootBullet()
+{
+    var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+    bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
+}
+}
+
