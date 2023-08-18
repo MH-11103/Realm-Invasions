@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
-public class NewBehaviourScript : MonoBehaviour
+public class LevelLoader2 : MonoBehaviour
 {
     public GameObject LoadingScreen;
     public Slider slider;
