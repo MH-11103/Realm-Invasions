@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] public GameObject PauseMenuPanel;
-
+    public int sceneIndex;
 
 
     public void Pause()
@@ -20,6 +20,14 @@ public class PauseMenu : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Level1");
+   
+
+       SceneManager.LoadScene(sceneIndex);
     }
+
+   /* public void LoadLevel(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
+
+    }*/
 }

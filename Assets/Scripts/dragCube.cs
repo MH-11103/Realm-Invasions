@@ -38,8 +38,13 @@ public class dragCube : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //currentRotationAmount = 0.0f;
+
+
         HandleTouchInput();
         ApplySmoothRotation();
+
+        
     }
 
     void HandleTouchInput()

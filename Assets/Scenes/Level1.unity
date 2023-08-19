@@ -12628,6 +12628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenuPanel: {fileID: 1944288063}
+  sceneIndex: 8
 --- !u!4 &1777424534
 Transform:
   m_ObjectHideFlags: 0
