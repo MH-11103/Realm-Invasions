@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Meteorite : MonoBehaviour
 {
-    public int damageAmount = 20;
+    public int damageAmount = 30;
 
     public float lifetime = 3;
 
@@ -14,9 +14,22 @@ public class Meteorite : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.collider.CompareTag("Target") || other.collider.CompareTag("drone"))
+        if (other.collider.CompareTag("drone"))
         {
             other.gameObject.GetComponent<DronehealthManager>().TakeDamage(damageAmount);
+            Destroy(gameObject);
+
+        }
+        else if (other.collider.CompareTag("blaster"))
+        {
+            other.gameObject.GetComponent<BlasterhealthManager>().TakeDamage(damageAmount);
+            Destroy(gameObject);
+
+        }
+        else if (other.collider.CompareTag("spider"))
+        {
+            other.gameObject.GetComponent<BlasterhealthManager>().TakeDamage(damageAmount);
+            Destroy(gameObject);
 
         }
 

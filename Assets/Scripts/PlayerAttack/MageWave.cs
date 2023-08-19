@@ -33,7 +33,7 @@ public class MageWave : MonoBehaviour
         if (Physics.Raycast(bulletSpawnPoint.position, bulletSpawnPoint.forward, out hit, detectionRange))
         {
             Debug.Log(hit.collider.tag);
-            if (hit.collider.CompareTag("drone") || hit.collider.CompareTag("Target"))// Change "Target" to the appropriate tag
+            if (hit.collider.CompareTag("drone") || hit.collider.CompareTag("blaster") || hit.collider.CompareTag("spider"))// Change "Target" to the appropriate tag
             {
                 targetObject = hit.collider.gameObject;
                 isShooting = true;

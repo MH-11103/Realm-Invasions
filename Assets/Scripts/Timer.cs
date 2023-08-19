@@ -26,7 +26,7 @@ public class Timer : MonoBehaviour
 
         if (timeValue == 0)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(10);
 
         }
     }

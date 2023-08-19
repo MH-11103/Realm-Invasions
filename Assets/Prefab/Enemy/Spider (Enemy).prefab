@@ -811,10 +811,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 67978991133585987}
-  - component: {fileID: 53107074533159056}
+  - component: {fileID: 2232863371302275054}
+  - component: {fileID: 5987962823901489013}
   m_Layer: 0
   m_Name: Spider (Enemy)
-  m_TagString: Target
+  m_TagString: spider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -833,9 +834,9 @@ Transform:
   m_Children:
   - {fileID: 6303554448280385627}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &53107074533159056
+--- !u!114 &2232863371302275054
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -844,11 +845,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1808061814816533021}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63207cde88bdf85459e2611e09a54c54, type: 3}
+  m_Script: {fileID: 11500000, guid: 13b97100738a86c42b0240c2d02bd529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 550
-  currentHealth: 0
+  speed: 5
+--- !u!114 &5987962823901489013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808061814816533021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2440656fdebff545969fb0295ca5cd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 20
 --- !u!1 &2077971271297646822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1789,7 +1802,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4081852134802496855}
-  m_LocalRotation: {x: 0.00000013783561, y: 0.000000025842304, z: 0.000000001052504, w: 1}
+  m_LocalRotation: {x: 0.00000013783561, y: 0.000000025842304, z: 0.000000001052504,
+    w: 1}
   m_LocalPosition: {x: -4.041567e-13, y: 0.0011026663, z: -1.8774854e-10}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1887,7 +1901,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4210896931683519854}
-  m_LocalRotation: {x: -0.000000011176004, y: 0.000000093114195, z: 0.0000000018921948, w: 1}
+  m_LocalRotation: {x: -0.000000011176004, y: 0.000000093114195, z: 0.0000000018921948,
+    w: 1}
   m_LocalPosition: {x: 9.708856e-13, y: 0.0011026664, z: -4.6492857e-10}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2389,9 +2404,10 @@ GameObject:
   - component: {fileID: 6303554448280385627}
   - component: {fileID: 2002784208675431945}
   - component: {fileID: 5912392482338426802}
+  - component: {fileID: 6116244829236339316}
   m_Layer: 0
   m_Name: Spider
-  m_TagString: Untagged
+  m_TagString: spider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2463,6 +2479,20 @@ CapsuleCollider:
   m_Height: 4.41
   m_Direction: 0
   m_Center: {x: 0, y: 0.4, z: 0.36}
+--- !u!114 &6116244829236339316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5649470782745054589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63207cde88bdf85459e2611e09a54c54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpidermaxHealth: 100
+  SpidercurrentHealth: 0
 --- !u!1 &5684412424268014863
 GameObject:
   m_ObjectHideFlags: 0
