@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletBlastFireBoy : MonoBehaviour
 {
-    public int damageAmount = 60;
+    public int damageAmount = 70;
     public float life = 3;
 
     void Awake()

@@ -7,7 +7,7 @@ public class Gun : MonoBehaviour
     public Transform bulletSpawnPoint;
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
-    public float detectionRange = 10; // Adjust this range as needed
+    public float detectionRange = 25; // Adjust this range as needed
 
    private GameObject targetObject;
     private bool isShooting = false;

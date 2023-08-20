@@ -4,8 +4,8 @@ public class Level2Spawner : MonoBehaviour
 {
     public GameObject characterPrefab;
     public GameObject secondCharacterPrefab; // Prefab for the second character
-    public float radius = 20f;
-    public float spawnDelay = 2f; // Time delay between spawning each character
+    public float radius = 100f;
+    public float spawnDelay = 4f; // Time delay between spawning each character
     public float spawnDuration = 90f; // Total spawning duration
 
     private Transform spawnPoint; // Reference to the spawn point's transform

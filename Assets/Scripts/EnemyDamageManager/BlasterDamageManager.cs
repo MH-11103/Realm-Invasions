@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlasterDamageManager : MonoBehaviour
 {
-    public int damageAmount = 20;
+    public int damageAmount = 40;
 
     private void OnCollisionEnter(Collision other)
     {

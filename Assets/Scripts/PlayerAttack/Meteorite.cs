@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Meteorite : MonoBehaviour
 {
-    public int damageAmount = 30;
+    public int damageAmount = 40;
 
     public float lifetime = 3;
 

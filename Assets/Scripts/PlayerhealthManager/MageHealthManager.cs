@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MageHealthManager : MonoBehaviour
 {
-    public int maxHealth = 100;
+    public int maxHealth = 150;
     public int currentHealth;
 
     private void Start()

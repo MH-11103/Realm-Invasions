@@ -14,21 +14,21 @@ public class BulletBlastBlaster : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.collider.CompareTag("drone"))
+        if (other.collider.CompareTag("misty"))
         {
-            other.gameObject.GetComponent<DronehealthManager>().TakeDamage(damageAmount);
+            other.gameObject.GetComponent<MistyHealthManager>().TakeDamage(damageAmount);
             Destroy(gameObject);
 
         }
-        else if (other.collider.CompareTag("blaster"))
+        else if (other.collider.CompareTag("mage"))
         {
-            other.gameObject.GetComponent<BlasterhealthManager>().TakeDamage(damageAmount);
+            other.gameObject.GetComponent<MageHealthManager>().TakeDamage(damageAmount);
             Destroy(gameObject);
 
         }
-        else if (other.collider.CompareTag("spider"))
+        else if (other.collider.CompareTag("fireboy"))
         {
-            other.gameObject.GetComponent<BlasterhealthManager>().TakeDamage(damageAmount);
+            other.gameObject.GetComponent<FireBoyHealthManager>().TakeDamage(damageAmount);
             Destroy(gameObject);
 
         }

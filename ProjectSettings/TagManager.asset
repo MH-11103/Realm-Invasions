@@ -6,6 +6,13 @@ TagManager:
   tags:
   - SpawnCenter
   - Target
+  - misty
+  - drone
+  - spider
+  - blaster
+  - mage
+  - fireboy
+  - BlasterBomb
   layers:
   - Default
   - TransparentFX

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7752949887448605430}
   m_Layer: 0
   m_Name: Blasterblast
-  m_TagString: Untagged
+  m_TagString: BlasterBomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,8 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dieTime: 3
-  collisionExplosion: {fileID: 1947871717301538, guid: f87e0da58d21ad34790a27debae82c91,
-    type: 3}
+  collisionExplosion: {fileID: 1947871717301538, guid: f87e0da58d21ad34790a27debae82c91, type: 3}
 --- !u!114 &7752949887448605430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,3 +161,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ace3bc132fb939e4bb998b5fca9ec017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageAmount: 60
+  life: 3

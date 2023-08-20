@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DronehealthManager : MonoBehaviour
 {
-    public int maxHealth = 100;
+    public int maxHealth = 20;
     public int currentHealth;
 
     private void Start()

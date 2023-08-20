@@ -65,7 +65,7 @@ public class MistyGun : MonoBehaviour
     public Transform bulletSpawnPoint;
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
-    public float detectionRange = 10; // Adjust this range as needed
+    public float detectionRange = 30; // Adjust this range as needed
     public float shootInterval = 1f; // Adjust the delay between shots
 
     private GameObject targetObject;

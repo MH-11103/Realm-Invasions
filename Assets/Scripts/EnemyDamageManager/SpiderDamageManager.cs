@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpiderDamageManager : MonoBehaviour
 {
-    public int damageAmount = 20;
+    public int damageAmount = 100;
 
     private void OnCollisionEnter(Collision other)
     {

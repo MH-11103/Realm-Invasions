@@ -36,11 +36,18 @@ public class Player : MonoBehaviour
             TakeDamage(40); // Decrease health when the prefab collides with the player
             Destroy(collision.gameObject); // Destroy the prefab
         }
-        if (collision.gameObject.CompareTag("spider")) // Assuming the prefab has a tag "EnemyPrefab"
+        if (collision.gameObject.CompareTag("BlasterBomb")) // Assuming the prefab has a tag "EnemyPrefab"
         {
-            TakeDamage(60); // Decrease health when the prefab collides with the player
+            TakeDamage(40); // Decrease health when the prefab collides with the player
             Destroy(collision.gameObject); // Destroy the prefab
         }
+        if (collision.gameObject.CompareTag("spider")) // Assuming the prefab has a tag "EnemyPrefab"
+        {
+            TakeDamage(100); // Decrease health when the prefab collides with the player
+            Destroy(collision.gameObject); // Destroy the prefab
+        }
+
+        
     }
 
     void TakeDamage(int damage)

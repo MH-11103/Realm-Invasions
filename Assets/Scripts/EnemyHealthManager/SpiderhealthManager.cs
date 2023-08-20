@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SpiderhealthManager : MonoBehaviour
 {
-    public int SpidermaxHealth = 100;
+    public int SpidermaxHealth = 600;
     public int SpidercurrentHealth;
 
     private void Start()

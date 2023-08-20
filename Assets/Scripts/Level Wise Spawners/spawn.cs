@@ -40,11 +40,11 @@
 
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class Level1Spawner : MonoBehaviour
 {
     public GameObject characterPrefab;
-    public float radius = 20f;
-    public float spawnDelay = 2f; // Time delay between spawning each character
+    public float radius = 100f;
+    public float spawnDelay = 4f; // Time delay between spawning each character
 
     private Transform spawnPoint; // Reference to the spawn point's transform
 

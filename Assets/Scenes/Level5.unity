@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44311652, g: 0.48683792, b: 0.54268223, a: 1}
+  m_IndirectSpecularColor: {r: 0.44311678, g: 0.48683816, b: 0.5426826, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1663,7 +1663,7 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 1615349451}
   bulletPrefab: {fileID: 4714361309278376686, guid: b423c951cc5635b40ba3145f5c160db5, type: 3}
   bulletSpeed: 10
-  detectionRange: 10
+  detectionRange: 27
 --- !u!120 &125451827
 LineRenderer:
   serializedVersion: 2
@@ -2904,96 +2904,6 @@ Transform:
   m_Father: {fileID: 1075835372}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &215829839
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 67978991133585987, guid: ef3f9326da3519a459105c4ec9e0d3b8, type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 67978991133585987, guid: ef3f9326da3519a459105c4ec9e0d3b8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -70
-      objectReference: {fileID: 0}
-    - target: {fileID: 67978991133585987, guid: ef3f9326da3519a459105c4ec9e0d3b8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 67978991133585987, guid: ef3f9326da3519a459105c4ec9e0d3b8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 67978991133585987, guid: ef3f9326da3519a459105c4ec9e0d3b8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 67978991133585987, guid: ef3f9326da3519a459105c4ec9e0d3b8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 67978991133585987, guid: ef3f9326da3519a459105c4ec9e0d3b8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 67978991133585987, guid: ef3f9326da3519a459105c4ec9e0d3b8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 67978991133585987, guid: ef3f9326da3519a459105c4ec9e0d3b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 67978991133585987, guid: ef3f9326da3519a459105c4ec9e0d3b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 67978991133585987, guid: ef3f9326da3519a459105c4ec9e0d3b8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1808061814816533021, guid: ef3f9326da3519a459105c4ec9e0d3b8, type: 3}
-      propertyPath: m_Name
-      value: Spider (Enemy)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1808061814816533021, guid: ef3f9326da3519a459105c4ec9e0d3b8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 215829841}
-  m_SourcePrefab: {fileID: 100100000, guid: ef3f9326da3519a459105c4ec9e0d3b8, type: 3}
---- !u!1 &215829840 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1808061814816533021, guid: ef3f9326da3519a459105c4ec9e0d3b8, type: 3}
-  m_PrefabInstance: {fileID: 215829839}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &215829841
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215829840}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db9be7ec6e8d56c4b8d1dab91d416c9a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &218055156
 GameObject:
   m_ObjectHideFlags: 0
@@ -13259,7 +13169,7 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 1299062507}
   bulletPrefab: {fileID: 4714361309278376686, guid: b423c951cc5635b40ba3145f5c160db5, type: 3}
   bulletSpeed: 10
-  detectionRange: 10
+  detectionRange: 27
 --- !u!120 &1046159813
 LineRenderer:
   serializedVersion: 2
@@ -13697,7 +13607,7 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 1552831093}
   bulletPrefab: {fileID: 5169085000492089410, guid: 085eaaf73e02e5f41a1ea21e047f3153, type: 3}
   bulletSpeed: 10
-  detectionRange: 10
+  detectionRange: 30
   shootInterval: 1
 --- !u!120 &1067825753
 LineRenderer:
@@ -13815,7 +13725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf88199788ec4ac4a94dad7f6808e2ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 150
   currentHealth: 0
 --- !u!1 &1069726248
 GameObject:
@@ -14133,7 +14043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterPrefab: {fileID: 1411947738987753125, guid: e7972cbd5ce7ce84fa4b3131e57fd0f2, type: 3}
   secondCharacterPrefab: {fileID: 4949739348877868970, guid: 6039b893efb1f4242a579a6f953b6e1c, type: 3}
-  thirdCharacterPrefab: {fileID: 1808061814816533021, guid: ef3f9326da3519a459105c4ec9e0d3b8, type: 3}
+  thirdCharacterPrefab: {fileID: 0}
   radius: 80
   spawnDelay: 2
   secondCharacterSpawnDelay: 10
@@ -21322,7 +21232,7 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 1351178737}
   bulletPrefab: {fileID: 4714361309278376686, guid: b423c951cc5635b40ba3145f5c160db5, type: 3}
   bulletSpeed: 10
-  detectionRange: 10
+  detectionRange: 27
 --- !u!120 &1575783126
 LineRenderer:
   serializedVersion: 2
@@ -30411,7 +30321,7 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 10739466}
   bulletPrefab: {fileID: 7946689339459131408, guid: 983ad9305472c944eaf7a30c4d211da0, type: 3}
   bulletSpeed: 10
-  detectionRange: 10
+  detectionRange: 24
 --- !u!136 &988598281032094501
 CapsuleCollider:
   m_ObjectHideFlags: 0

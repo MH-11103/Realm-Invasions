@@ -5,8 +5,8 @@ public class Level5Spawner : MonoBehaviour
     public GameObject characterPrefab;
     public GameObject secondCharacterPrefab;
     public GameObject thirdCharacterPrefab; // Prefab for the third character
-    public float radius = 20f;
-    public float spawnDelay = 2f;
+    public float radius = 100f;
+    public float spawnDelay = 4f;
     public float secondCharacterSpawnDelay = 10f; // Delay for spawning the second character
     public float spawnDuration = 90f;
 

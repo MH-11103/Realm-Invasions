@@ -148,8 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dieTime: 3
-  collisionExplosion: {fileID: 1947871717301538, guid: f87e0da58d21ad34790a27debae82c91,
-    type: 3}
+  collisionExplosion: {fileID: 1947871717301538, guid: f87e0da58d21ad34790a27debae82c91, type: 3}
 --- !u!114 &2910389452316720120
 MonoBehaviour:
   m_ObjectHideFlags: 0

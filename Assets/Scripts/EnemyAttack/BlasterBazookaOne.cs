@@ -7,7 +7,7 @@ public class BlasterBazookaOne : MonoBehaviour
     public Transform bulletSpawnPoint;
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
-    public float detectionRange = 10; // Adjust this range as needed
+    public float detectionRange = 22; // Adjust this range as needed
 
     private GameObject targetObject;
     private bool isShooting = false;
@@ -35,7 +35,7 @@ public class BlasterBazookaOne : MonoBehaviour
         if (Physics.Raycast(bulletSpawnPoint.position, bulletSpawnPoint.forward, out hit, detectionRange))
         {
             Debug.Log(hit.collider.tag);
-            if (hit.collider.CompareTag("drone") || hit.collider.CompareTag("blaster") || hit.collider.CompareTag("spider")) // Change "Target" to the appropriate tag
+            if (hit.collider.CompareTag("misty") || hit.collider.CompareTag("mage") || hit.collider.CompareTag("fireboy") || hit.collider.CompareTag("SpawnCenter")) // Change "Target" to the appropriate tag
             {
 
                 targetObject = hit.collider.gameObject;
