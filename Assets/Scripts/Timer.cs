@@ -7,6 +7,7 @@ public class Timer : MonoBehaviour
 {
     public float timeValue = 90;
     public Text timerText;
+    public int GameOverScene;
      
 
 
@@ -26,7 +27,7 @@ public class Timer : MonoBehaviour
 
         if (timeValue == 0)
         {
-            SceneManager.LoadScene(10);
+            SceneManager.LoadScene(GameOverScene);
 
         }
     }

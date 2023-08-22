@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/GameOverScreen.unity
+    path: Assets/Scenes/GameOverScreen2.unity
     guid: 9450d36cab638d44fa704e9aaa27b8db
   - enabled: 1
     path: Assets/Scenes/LevelsScene.unity
@@ -32,4 +32,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: f3d1e8c3cbf4a104993b0a6d823c4a3e
+  - enabled: 1
+    path: Assets/Scenes/VictoryScreen.unity
+    guid: f83799488f486844591d023bcc42a618
+  - enabled: 1
+    path: Assets/Scenes/GameOverLevel1.unity
+    guid: 16b2a7efb25a5f645bdf6758cdbf26b4
+  - enabled: 1
+    path: Assets/Scenes/GameOverLevel3.unity
+    guid: 38826b30a6a518940b9ddb4b29430d00
+  - enabled: 1
+    path: Assets/Scenes/GameOverLevel4.unity
+    guid: b6e2fa7c1a3a6544cb78ee7ca6d9dba2
+  - enabled: 1
+    path: Assets/Scenes/GameOverLevel5.unity
+    guid: fbd3edb3845b87642b402f5bc184062a
+  - enabled: 1
+    path: Assets/Scenes/GameOverLevel2.unity
+    guid: 3f29a5d34cd0336488ae5f415ea4a372
   m_configObjects: {}
