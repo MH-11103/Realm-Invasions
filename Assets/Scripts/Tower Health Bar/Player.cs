@@ -3,10 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public int maxHealth = 1000;
+    public int maxHealth = 1500;
     public int currentHealth;
 
     public HealthBar healthBar;
+
+    private float timer = 90f; // 90 seconds timer
+    private bool isTimerActive = true;
+
+    int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
 
     // Start is called before the first frame update
     void Start()
@@ -15,39 +21,81 @@ public class Player : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Space))
-    //    {
-    //        TakeDamage(20);
-    //    }
-    //}
+    void Update()
+    {
+        if (isTimerActive)
+        {
+            timer -= Time.deltaTime; // Decrement the timer based on real time
+            if (timer <= 0 || currentHealth == 0)
+            {
+                // Timer has reached 0, do something (e.g., game over logic)
+                isTimerActive = false; // Stop the timer
+                switch (currentSceneIndex){
+                    case 2:
+                        SceneManager.LoadScene("GameOverLevel1");
+                        break;
+                    case 3:
+                        SceneManager.LoadScene("GameOverLevel2");
+                        break;
+                    case 4:
+                        SceneManager.LoadScene("GameOverLevel3");
+                        break;
+                    case 5:
+                        SceneManager.LoadScene("GameOverLevel4");
+                        break;
+                    case 6:
+                        SceneManager.LoadScene("GameOverLevel5");
+                        break;
+                }
+            }
+            else if (timer <= 0 || currentHealth > 0)
+            {
+                // Timer has reached 0, do something (e.g., game over logic)
+                isTimerActive = false; // Stop the timer
+                switch (currentSceneIndex)
+                {
+                    case 2:
+                        SceneManager.LoadScene("VictoryScreen1");
+                        break;
+                    case 3:
+                        SceneManager.LoadScene("VictoryScreen2");
+                        break;
+                    case 4:
+                        SceneManager.LoadScene("VictoryScreen3");
+                        break;
+                    case 5:
+                        SceneManager.LoadScene("VictoryScreen4");
+                        break;
+                    case 6:
+                        SceneManager.LoadScene("VictoryScreen5");
+                        break;
+                }
+            }
+        }
+    }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("drone")) // Assuming the prefab has a tag "EnemyPrefab"
+        if (collision.gameObject.CompareTag("drone")) 
         {
-            TakeDamage(20); // Decrease health when the prefab collides with the player
-            Destroy(collision.gameObject); // Destroy the prefab
+            TakeDamage(20); 
+            Destroy(collision.gameObject); 
         }
-        if (collision.gameObject.CompareTag("blaster")) // Assuming the prefab has a tag "EnemyPrefab"
+        if (collision.gameObject.CompareTag("blaster")) 
         {
-            TakeDamage(40); // Decrease health when the prefab collides with the player
-            Destroy(collision.gameObject); // Destroy the prefab
+            TakeDamage(40); 
+            Destroy(collision.gameObject); 
         }
-        if (collision.gameObject.CompareTag("BlasterBomb")) // Assuming the prefab has a tag "EnemyPrefab"
+        if (collision.gameObject.CompareTag("BlasterBomb")) 
         {
-            TakeDamage(40); // Decrease health when the prefab collides with the player
-            Destroy(collision.gameObject); // Destroy the prefab
+            TakeDamage(40); 
+            Destroy(collision.gameObject); 
         }
-        if (collision.gameObject.CompareTag("spider")) // Assuming the prefab has a tag "EnemyPrefab"
+        if (collision.gameObject.CompareTag("spider")) 
         {
-            TakeDamage(100); // Decrease health when the prefab collides with the player
-            Destroy(collision.gameObject); // Destroy the prefab
-        }
-
-        
+            TakeDamage(100); 
+            Destroy(collision.gameObject); 
+        }   
     }
 
     void TakeDamage(int damage)
@@ -57,9 +105,27 @@ public class Player : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         if (currentHealth == 0)
         {
-            SceneManager.LoadScene(10);
-
+            switch (currentSceneIndex)
+            {
+                case 2:
+                    SceneManager.LoadScene("GameOverLevel1");
+                    break;
+                case 3:
+                    SceneManager.LoadScene("GameOverLevel2");
+                    break;
+                case 4:
+                    SceneManager.LoadScene("GameOverLevel3");
+                    break;
+                case 5:
+                    SceneManager.LoadScene("GameOverLevel4");
+                    break;
+                case 6:
+                    SceneManager.LoadScene("GameOverLevel5");
+                    break;
+            }
         }
-    }
 
+    }
 }
+
+

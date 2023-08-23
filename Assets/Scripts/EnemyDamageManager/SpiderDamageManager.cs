@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpiderDamageManager : MonoBehaviour
@@ -11,19 +9,19 @@ public class SpiderDamageManager : MonoBehaviour
         if (other.collider.CompareTag("misty"))
         {
             other.gameObject.GetComponent<MistyHealthManager>().TakeDamage(damageAmount);
-            Destroy(gameObject);
+            //Destroy(gameObject);
 
         }
         else if (other.collider.CompareTag("mage"))
         {
             other.gameObject.GetComponent<MageHealthManager>().TakeDamage(damageAmount);
-            Destroy(gameObject);
+            //Destroy(gameObject);
 
         }
         else if (other.collider.CompareTag("fireboy"))
         {
             other.gameObject.GetComponent<FireBoyHealthManager>().TakeDamage(damageAmount);
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }

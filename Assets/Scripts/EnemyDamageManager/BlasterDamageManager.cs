@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BlasterDamageManager : MonoBehaviour
 {
-    public int damageAmount = 40;
+    public int damageAmount = 60;
 
     private void OnCollisionEnter(Collision other)
     {

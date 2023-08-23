@@ -47,7 +47,7 @@ public class Level2Spawner : MonoBehaviour
     {
         spawningFirstCharacter = false; // Stop spawning the first character
 
-        // Generate a random angle within the circle
+        //// Generate a random angle within the circle
         float randomAngle = Random.Range(0f, Mathf.PI * 2f);
 
         // Calculate the position using trigonometry
@@ -57,6 +57,23 @@ public class Level2Spawner : MonoBehaviour
         // Instantiate the second character at the calculated position
         Vector3 spawnPosition = spawnPoint.position + new Vector3(x, 0f, z);
         Instantiate(secondCharacterPrefab, spawnPosition, Quaternion.identity);
+
+        // Generate a random angle within the circle
+        //float randomAngle = Random.Range(0f, Mathf.PI * 2f);
+
+        //// Calculate the position using trigonometry
+        //float x = Mathf.Cos(randomAngle) * radius;
+        //float z = Mathf.Sin(randomAngle) * radius;
+
+        //// Instantiate the character at the calculated position
+        //Vector3 spawnPosition = spawnPoint.position + new Vector3(x, 0f, z);
+        //GameObject newCharacter = Instantiate(characterPrefab, spawnPosition, Quaternion.identity);
+
+        //// Calculate the direction to the spawn point
+        //Vector3 directionToSpawnPoint = spawnPoint.position - newCharacter.transform.position;
+
+        //// Set the character's rotation to face the spawn point
+        //newCharacter.transform.rotation = Quaternion.LookRotation(directionToSpawnPoint);
     }
 }
 

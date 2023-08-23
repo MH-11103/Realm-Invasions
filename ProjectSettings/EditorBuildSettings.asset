@@ -6,11 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/GameOverScreen2.unity
-    guid: 9450d36cab638d44fa704e9aaa27b8db
+    path: Assets/Scenes/MainMenu.unity
+    guid: 491ce6adff33ea74a99722890357e1d4
   - enabled: 1
     path: Assets/Scenes/LevelsScene.unity
     guid: 4f263f3e916e8ab4db4c7dc26ca079d5
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: f3d1e8c3cbf4a104993b0a6d823c4a3e
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: 812280f0f89217f49bf9b9995707144b
@@ -24,20 +27,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Level5.unity
     guid: abe2f3311be51774b91b26f31f70e24b
   - enabled: 1
-    path: Assets/Scenes/Level6.unity
-    guid: ec1d3b8256ef5154cbaa7462aff5b34c
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 491ce6adff33ea74a99722890357e1d4
-  - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: f3d1e8c3cbf4a104993b0a6d823c4a3e
-  - enabled: 1
-    path: Assets/Scenes/VictoryScreen.unity
-    guid: f83799488f486844591d023bcc42a618
-  - enabled: 1
     path: Assets/Scenes/GameOverLevel1.unity
     guid: 16b2a7efb25a5f645bdf6758cdbf26b4
+  - enabled: 1
+    path: Assets/Scenes/GameOverLevel2.unity
+    guid: 3f29a5d34cd0336488ae5f415ea4a372
   - enabled: 1
     path: Assets/Scenes/GameOverLevel3.unity
     guid: 38826b30a6a518940b9ddb4b29430d00
@@ -48,6 +42,24 @@ EditorBuildSettings:
     path: Assets/Scenes/GameOverLevel5.unity
     guid: fbd3edb3845b87642b402f5bc184062a
   - enabled: 1
-    path: Assets/Scenes/GameOverLevel2.unity
-    guid: 3f29a5d34cd0336488ae5f415ea4a372
+    path: Assets/Scenes/Pause Resume Menu.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/LoadingScreen.unity
+    guid: 594551019cd3fb549b1b645a967da8e4
+  - enabled: 1
+    path: Assets/Scenes/VictoryScreen1.unity
+    guid: f83799488f486844591d023bcc42a618
+  - enabled: 1
+    path: Assets/Scenes/VictoryScreen2.unity
+    guid: df741b74e84481347ac7df08c7bcbfee
+  - enabled: 1
+    path: Assets/Scenes/VictoryScreen3.unity
+    guid: 3f2b169ad85748a4b9d5b6c6b158e28d
+  - enabled: 1
+    path: Assets/Scenes/VictoryScreen4.unity
+    guid: 9566f4ed6a6af5f46af01359208f1b13
+  - enabled: 1
+    path: Assets/Scenes/VictoryScreen5.unity
+    guid: 3ef1a127f410de14fb10d7d1606b2eba
   m_configObjects: {}

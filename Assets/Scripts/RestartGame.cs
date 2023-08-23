@@ -1,12 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class RestartGame : MonoBehaviour
 {
-    public int sceneIndex;
-    public void Restart()
+    //public int sceneIndex;
+    public void Restart(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
+    }
+
+    public void nextLevel(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);
     }
