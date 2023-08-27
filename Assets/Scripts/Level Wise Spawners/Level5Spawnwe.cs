@@ -47,8 +47,11 @@ public class Level5Spawner : MonoBehaviour
             float z = Mathf.Sin(randomAngle) * radius;
             Vector3 spawnPosition = spawnPoint.position + new Vector3(x, 0f, z);
             GameObject newCharacter = Instantiate(secondCharacterPrefab, spawnPosition, Quaternion.identity);
-            Vector3 directionToSpawnPoint = spawnPoint.position - newCharacter.transform.position;
-            newCharacter.transform.rotation = Quaternion.LookRotation(directionToSpawnPoint);
+            Vector3 directionToSpawnCenter = spawnPoint.position - newCharacter.transform.position;
+
+            // Calculate rotation to face the spawn center while keeping the Y axis up
+            Quaternion rotation = Quaternion.LookRotation(new Vector3(directionToSpawnCenter.x, 0f, directionToSpawnCenter.z), Vector3.up);
+            newCharacter.transform.rotation = rotation;
         }
     }
 

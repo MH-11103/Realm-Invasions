@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BlasterBazookaOne : MonoBehaviour
@@ -37,7 +35,6 @@ public class BlasterBazookaOne : MonoBehaviour
             Debug.Log(hit.collider.tag);
             if (hit.collider.CompareTag("misty") || hit.collider.CompareTag("mage") || hit.collider.CompareTag("fireboy") || hit.collider.CompareTag("SpawnCenter")) // Change "Target" to the appropriate tag
             {
-
                 targetObject = hit.collider.gameObject;
                 isShooting = true;
             }

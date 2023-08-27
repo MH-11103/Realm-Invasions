@@ -31,11 +31,11 @@ Transform:
   m_GameObject: {fileID: 161165033349827821}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.67, y: 0.244, z: 0.01}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3638857127893915980
 MeshFilter:
@@ -148,7 +148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dieTime: 3
-  collisionExplosion: {fileID: 1947871717301538, guid: f87e0da58d21ad34790a27debae82c91, type: 3}
+  collisionExplosion: {fileID: 1947871717301538, guid: f87e0da58d21ad34790a27debae82c91,
+    type: 3}
 --- !u!114 &7752949887448605430
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1667,12 +1667,12 @@ Transform:
   m_GameObject: {fileID: 4949739348877868970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -63.6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7057961623512810953}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1666136029960180935
 MonoBehaviour:
@@ -1686,7 +1686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b97100738a86c42b0240c2d02bd529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 6
 --- !u!114 &8557761230491869048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1713,7 +1713,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 4317354620726143990}
-  bulletPrefab: {fileID: 161165033349827821, guid: 70e879ded7c83fc4aa9e4c9233476ff1, type: 3}
+  bulletPrefab: {fileID: 161165033349827821, guid: 70e879ded7c83fc4aa9e4c9233476ff1,
+    type: 3}
   bulletSpeed: 10
   detectionRange: 22
 --- !u!114 &6876510845000406397
@@ -1729,7 +1730,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 562247429310977717}
-  bulletPrefab: {fileID: 161165033349827821, guid: 70e879ded7c83fc4aa9e4c9233476ff1, type: 3}
+  bulletPrefab: {fileID: 161165033349827821, guid: 70e879ded7c83fc4aa9e4c9233476ff1,
+    type: 3}
   bulletSpeed: 10
   detectionRange: 22
 --- !u!114 &1705561691383083774
@@ -2100,7 +2102,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6884207887631920353}
   serializedVersion: 4
-  m_Mass: 15
+  m_Mass: 22
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

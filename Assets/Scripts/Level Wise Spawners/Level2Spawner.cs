@@ -45,35 +45,16 @@ public class Level2Spawner : MonoBehaviour
 
     void SpawnSecondCharacter()
     {
-        spawningFirstCharacter = false; // Stop spawning the first character
-
-        //// Generate a random angle within the circle
         float randomAngle = Random.Range(0f, Mathf.PI * 2f);
-
-        // Calculate the position using trigonometry
         float x = Mathf.Cos(randomAngle) * radius;
         float z = Mathf.Sin(randomAngle) * radius;
-
-        // Instantiate the second character at the calculated position
         Vector3 spawnPosition = spawnPoint.position + new Vector3(x, 0f, z);
-        Instantiate(secondCharacterPrefab, spawnPosition, Quaternion.identity);
+        GameObject newCharacter = Instantiate(secondCharacterPrefab, spawnPosition, Quaternion.identity);
+        Vector3 directionToSpawnCenter = spawnPoint.position - newCharacter.transform.position;
 
-        // Generate a random angle within the circle
-        //float randomAngle = Random.Range(0f, Mathf.PI * 2f);
-
-        //// Calculate the position using trigonometry
-        //float x = Mathf.Cos(randomAngle) * radius;
-        //float z = Mathf.Sin(randomAngle) * radius;
-
-        //// Instantiate the character at the calculated position
-        //Vector3 spawnPosition = spawnPoint.position + new Vector3(x, 0f, z);
-        //GameObject newCharacter = Instantiate(characterPrefab, spawnPosition, Quaternion.identity);
-
-        //// Calculate the direction to the spawn point
-        //Vector3 directionToSpawnPoint = spawnPoint.position - newCharacter.transform.position;
-
-        //// Set the character's rotation to face the spawn point
-        //newCharacter.transform.rotation = Quaternion.LookRotation(directionToSpawnPoint);
+        // Calculate rotation to face the spawn center while keeping the Y axis up
+        Quaternion rotation = Quaternion.LookRotation(new Vector3(directionToSpawnCenter.x, 0f, directionToSpawnCenter.z), Vector3.up);
+        newCharacter.transform.rotation = rotation;
     }
 }
 

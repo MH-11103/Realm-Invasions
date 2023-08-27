@@ -1,15 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class Bazooka : MonoBehaviour
 {
     public Transform bulletSpawnPoint;
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
     public float detectionRange = 25; // Adjust this range as needed
 
-   private GameObject targetObject;
+    private GameObject targetObject;
     private bool isShooting = false;
 
     void Update()
@@ -19,33 +17,26 @@ public class Gun : MonoBehaviour
             ShootBullet();
         }
 
-         DetectTarget();
+        DetectTarget();
 
-         if (isShooting && targetObject != null)
-         {
-             ShootBullet();
-         }
-     }
-
-        void DetectTarget()
+        if (isShooting && targetObject != null)
         {
-            RaycastHit hit;
-            Debug.DrawRay(bulletSpawnPoint.position, bulletSpawnPoint.forward * detectionRange, Color.red); // Debug ray
+            ShootBullet();
+        }
+    }
 
-            if (Physics.Raycast(bulletSpawnPoint.position, bulletSpawnPoint.forward, out hit, detectionRange))
-            {
+    void DetectTarget()
+    {
+        RaycastHit hit;
+        Debug.DrawRay(bulletSpawnPoint.position, bulletSpawnPoint.forward * detectionRange, Color.red); // Debug ray
+
+        if (Physics.Raycast(bulletSpawnPoint.position, bulletSpawnPoint.forward, out hit, detectionRange))
+        {
             Debug.Log(hit.collider.tag);
-            if (hit.collider.CompareTag("drone") || hit.collider.CompareTag("blaster") || hit.collider.CompareTag("spider")) // Change "Target" to the appropriate tag
+            if (hit.collider.CompareTag("drone") || hit.collider.CompareTag("blaster") || hit.collider.CompareTag("spider"))// Change "Target" to the appropriate tag
             {
-                
-                    targetObject = hit.collider.gameObject;
-                    isShooting = true;
-                }
-                else
-                {
-                    targetObject = null;
-                    isShooting = false;
-                }
+                targetObject = hit.collider.gameObject;
+                isShooting = true;
             }
             else
             {
@@ -53,11 +44,17 @@ public class Gun : MonoBehaviour
                 isShooting = false;
             }
         }
-
-        void ShootBullet()
+        else
         {
-            var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-            bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
+            targetObject = null;
+            isShooting = false;
         }
     }
+
+    void ShootBullet()
+    {
+        var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
+    }
+}
 

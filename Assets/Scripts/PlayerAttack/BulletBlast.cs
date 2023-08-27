@@ -26,7 +26,7 @@ public class BulletBlastFireBoy : MonoBehaviour
         }
         else if (other.collider.CompareTag("spider"))
         {
-            other.gameObject.GetComponent<BlasterhealthManager>().TakeDamage(damageAmount);
+            other.gameObject.GetComponent<SpiderhealthManager>().TakeDamage(damageAmount);
             Destroy(gameObject);
 
         }
